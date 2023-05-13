@@ -22,8 +22,30 @@ while (true)
 
     var customer = customers.FirstOrDefault(x => x.Id == customerId);
 
-    var customerDiscountStrategy =
+
+    #region Old way without using the factory pattern
+
+    // if (customer.CustomerCategory == CustomerCategory.Gold)
+    // {
+    //     customerDiscountStrategy = new GoldDiscountStrategy();
+    // }
+    // else if (customer.CustomerCategory == CustomerCategory.Silver)
+    // {
+    //     customerDiscountStrategy = new SilverDiscountStrategy();
+    // }
+    // else if (customer.CustomerCategory == CustomerCategory.New)
+    // {
+    //     customerDiscountStrategy = new NewDiscountStrategy();
+    // }
+
+    #endregion
+
+    #region when using the Factory pattern
+
+    ICustomerDiscountStrategy customerDiscountStrategy =
         new CustomerDiscountStrategyFactory().CreateCustomerDiscountStrategy(customer.CustomerCategory);
+
+    #endregion
 
     var invoiceManager = new InvoiceManager();
     invoiceManager.SetDiscountStrategy(customerDiscountStrategy);
