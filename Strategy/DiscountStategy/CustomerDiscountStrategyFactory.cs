@@ -19,6 +19,6 @@ public class CustomerDiscountStrategyFactory
                 return new NewDiscountStrategy();
         }
 
-        return null;
+        return new NullDiscountStrategy();
     }
 }
