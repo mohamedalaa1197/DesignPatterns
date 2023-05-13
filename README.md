@@ -21,5 +21,22 @@ Cons =>
       a. suppose u have a singleton class, and has a function that sets how many times, this function has been called
       b. and there is two places (threads) at the same time called this function to increase the counter of the method calls, in this time **race condition happens**, and the counter variable will not be correct.
       b. Diffcult to test, (write unit testing).
+      
+      
+**Strategy Desing Pattern** => It is used when the behaviour of an entity will change during the run time of the application
+
+How to Implement => 
+ 1. make an Interface that contain the method, that its behaviour will change during the run of the application
+ 2. create a different class for each behaviour u expect to have during the runtime, and Implement this interface and Implemnt its function
+ 3. then u can use this Interfac as an instance an call the sutable implementaion u need to have.
+
+Pros => 
+ 1. U encapsulated ur code.
+ 2. Easy to add new strategy.
+ 3. Open/Closed Pattern.
+ 4. Improves Clean code.
+
+Cons => 
+1. more Complixitey in your application. 
                   
   
