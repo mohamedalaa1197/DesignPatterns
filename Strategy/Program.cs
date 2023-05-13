@@ -22,20 +22,8 @@ while (true)
 
     var customer = customers.FirstOrDefault(x => x.Id == customerId);
 
-    ICustomerDiscountStrategy customerDiscountStrategy = null;
-    if (customer.CustomerCategory == CustomerCategory.Gold)
-    {
-        customerDiscountStrategy = new GoldDiscountStrategy();
-    }
-    else if (customer.CustomerCategory == CustomerCategory.Silver)
-    {
-        customerDiscountStrategy = new SilverDiscountStrategy();
-    }
-    else if (customer.CustomerCategory == CustomerCategory.New)
-    {
-        customerDiscountStrategy = new NewDiscountStrategy();
-    }
-
+    var customerDiscountStrategy =
+        new CustomerDiscountStrategyFactory().CreateCustomerDiscountStrategy(customer.CustomerCategory);
 
     var invoiceManager = new InvoiceManager();
     invoiceManager.SetDiscountStrategy(customerDiscountStrategy);
