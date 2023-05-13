@@ -38,5 +38,20 @@ Pros =>
 
 Cons => 
 1. more Complixitey in your application. 
+
+**Adaptor Design Pattern ** => It is used when u need to integrate with two applications that are incompatable with each other
+
+How to Implement => 
+ 1. Create a middle layer of the classes u want that connects the two applications, and use this class.
+
+Pros => 
+ 1. allows you to use existing code
+ 2. Add flexiability, as u can connect with any system u need.
+ 3. no need to change the client code
+
+Cons => 
+1. Add more complexity to ur code.
+2. may lead to performance issues, as there is a new layer between the two applications now, needs to be created
+
                   
   
