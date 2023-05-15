@@ -53,5 +53,22 @@ Cons =>
 1. Add more complexity to ur code.
 2. may lead to performance issues, as there is a new layer between the two applications now, needs to be created
 
+
+**Simple Factory Design pattern** => it is a creational design that hide the creation of an object from the client, by hiding it in its own place (function), this function will take parameters and based on it, it will return the correct object.
+
+How to implement :- 
+ Create a class, with a function, that return different (return the parent) objects, based on the function parameters
+
+
+
+ pros => 
+    1. Encapsulation:- it encapsulate the creational logic into one function.
+    2. Abstraction :- it abstract the creational logic from the client. 
+    3. Code centeralization :-  all the creational code in one place.
+
+cons => 
+    1. Violets the Open/closed principle. 
+    2. tightly coupled with concrete classes.
+
                   
   
