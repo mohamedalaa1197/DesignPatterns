@@ -17,9 +17,9 @@ public class InvoiceManager
         var invoice = new Invoice()
         {
             Customer = customer,
-            Items = new List<Item>()
+            InvoiceLines = new List<InvoiceLine>()
             {
-                new Item() { Quantity = quantity, UnitPrice = unitPrice }
+                new InvoiceLine() { Quantity = quantity, UnitPrice = unitPrice }
             }
         };
         invoice.DiscountPrecentage = _customerDiscountStrategy.CalculateDiscount(invoice.TotalPrice);

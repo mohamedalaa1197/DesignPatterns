@@ -2,6 +2,7 @@
 
 public class Item
 {
-    public decimal UnitPrice { get; set; }
-    public decimal Quantity { get; set; }
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public double UnitPrice { get; set; }
 }
