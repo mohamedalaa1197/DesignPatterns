@@ -80,6 +80,92 @@ cons =>
     1. Reusability, the parent class is used in each child.
     2. flexability, we can have more childs each one with its implementation.
     
+    
+ **Factory Method Design pattern ** ==> this design pattern provides an interface for the object creation, and the instianting of this class will be in the sub classes
+
+  Example on the Implementation => 
+```
+// Abstract Product
+public interface IAnimal
+{
+    void MakeSound();
+}
+
+// Concrete Products
+public class Dog : IAnimal
+{
+    public void MakeSound()
+    {
+        Console.WriteLine("Woof!");
+    }
+}
+
+public class Cat : IAnimal
+{
+    public void MakeSound()
+    {
+        Console.WriteLine("Meow!");
+    }
+}
+
+// Abstract Creator
+public abstract class AnimalFactory
+{
+    // Factory Method
+    public abstract IAnimal CreateAnimal();
+
+    // Other methods
+    public void DoSomething()
+    {
+        IAnimal animal = CreateAnimal();
+        animal.MakeSound();
+    }
+}
+
+// Concrete Creators
+public class DogFactory : AnimalFactory
+{
+    public override IAnimal CreateAnimal()
+    {
+        return new Dog();
+    }
+}
+
+public class CatFactory : AnimalFactory
+{
+    public override IAnimal CreateAnimal()
+    {
+        return new Cat();
+    }
+}
+
+// Client code
+public class MainClass
+{
+    public static void Main(string[] args)
+    {
+        AnimalFactory dogFactory = new DogFactory();
+        IAnimal dog = dogFactory.CreateAnimal();
+        dog.MakeSound(); // Output: Woof!
+
+        AnimalFactory catFactory = new CatFactory();
+        IAnimal cat = catFactory.CreateAnimal();
+        cat.MakeSound(); // Output: Meow!
+    }
+}
+```
+
+Pros ==> 
+ 1.  Encapsulation :- it encapuslate the code creation in one iterface, any class (Factory class) want to have this to create its objects, should implement this interface or abstarct method.
+ 2.  applying the Dependency Inversion P :- which states, High Level models, should not depend on low level modules, both should depend on abstraction, and abstraction should not depend on details, details should depend    on abstraction, the client code (the last part) doesn't directly depend on the concrete class itself, but it depends on the abstarct layer (DogFactory for ex), and the Dogfactory depend on a the factory Method itself
+
+cons ==> 
+1. Adding more complexity to the code 
+2. Runtime desicions
+
+
+
+
      
                   
   
