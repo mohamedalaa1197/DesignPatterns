@@ -1,4 +1,6 @@
-﻿namespace Strategy.Domain;
+﻿using SalesSystem.Payments.Abstraction;
+
+namespace Strategy.Domain;
 
 /// <summary>
 /// this is the parent class, which contain the main methods, but we can't use it, will be base for other entities
@@ -12,7 +14,7 @@ public abstract class ShoppingCart
         _lines.Add(new InvoiceLine() { ItemId = itemId, Quantity = quantity, UnitPrice = unitPrice });
     }
 
-    public void Checkout(Customer customer)
+    public void Checkout(Customer customer, PaymentProcessor paymentProcessor)
     {
         var invoice = new Invoice()
         {
@@ -22,7 +24,7 @@ public abstract class ShoppingCart
 
         ApplyTaxes(invoice);
         ApplyDiscount(invoice);
-        ProcessPayment(invoice);
+        ProcessPayment(invoice, paymentProcessor);
     }
 
 
@@ -31,8 +33,9 @@ public abstract class ShoppingCart
         invoice.Tax = invoice.TotalPrice * 0.15m;
     }
 
-    private void ProcessPayment(Invoice invoice)
+    private void ProcessPayment(Invoice invoice, PaymentProcessor paymentProcessor)
     {
+        var payment = paymentProcessor.ProcessPayment(invoice.Customer.Id, invoice.NetPrice);
         Console.WriteLine("We have finished your payment");
     }
 

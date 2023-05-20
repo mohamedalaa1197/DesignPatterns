@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {
-      "SalesSystem.Payments.Abstraction/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/SalesSystem.Payments.Abstraction.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SalesSystem.Payments.Abstraction.dll": {}
-        }
-      }
-    }
+    "net7.0": {}
   },
-  "libraries": {
-    "SalesSystem.Payments.Abstraction/1.0.0": {
-      "type": "project",
-      "path": "../SalesSystem.Payments.Abstraction/SalesSystem.Payments.Abstraction.csproj",
-      "msbuildProject": "../SalesSystem.Payments.Abstraction/SalesSystem.Payments.Abstraction.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net7.0": [
-      "SalesSystem.Payments.Abstraction >= 1.0.0"
-    ]
+    "net7.0": []
   },
   "packageFolders": {
     "C:\\Users\\moham\\.nuget\\packages\\": {}
@@ -32,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\moham\\RiderProjects\\DesignPatterns\\Strategy\\Strategy.csproj",
-      "projectName": "Strategy",
-      "projectPath": "C:\\Users\\moham\\RiderProjects\\DesignPatterns\\Strategy\\Strategy.csproj",
+      "projectUniqueName": "C:\\Users\\moham\\RiderProjects\\DesignPatterns\\SalesSystem.Payments.Abstraction\\SalesSystem.Payments.Abstraction.csproj",
+      "projectName": "SalesSystem.Payments.Abstraction",
+      "projectPath": "C:\\Users\\moham\\RiderProjects\\DesignPatterns\\SalesSystem.Payments.Abstraction\\SalesSystem.Payments.Abstraction.csproj",
       "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\moham\\RiderProjects\\DesignPatterns\\Strategy\\obj\\",
+      "outputPath": "C:\\Users\\moham\\RiderProjects\\DesignPatterns\\SalesSystem.Payments.Abstraction\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,11 +33,7 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {
-            "C:\\Users\\moham\\RiderProjects\\DesignPatterns\\SalesSystem.Payments.Abstraction\\SalesSystem.Payments.Abstraction.csproj": {
-              "projectPath": "C:\\Users\\moham\\RiderProjects\\DesignPatterns\\SalesSystem.Payments.Abstraction\\SalesSystem.Payments.Abstraction.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

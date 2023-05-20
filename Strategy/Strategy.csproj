@@ -14,4 +14,8 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\SalesSystem.Payments.Abstraction\SalesSystem.Payments.Abstraction.csproj" />
+    </ItemGroup>
+
 </Project>
