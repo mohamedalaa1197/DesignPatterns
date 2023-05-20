@@ -69,6 +69,17 @@ How to implement :-
 cons => 
     1. Violets the Open/closed principle. 
     2. tightly coupled with concrete classes.
+    
+**Template Method Design Pattern** => it is a pattern where the base class provide the skeleton of a specific method, which implemenation will vary in the child classes of this base.
 
+ How to Implement :- 
+  1. create a parent class as abstract, and in this class define the function (which has different logic in each child)
+  2. create the subclasses and Inherit from the parent, and Implement the function logic for each child.
+
+   Pros ==>  
+    1. Reusability, the parent class is used in each child.
+    2. flexability, we can have more childs each one with its implementation.
+    
+     
                   
   
