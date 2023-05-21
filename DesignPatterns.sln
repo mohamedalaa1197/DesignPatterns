@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "Strategy\Strate
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesSystem.Payments.Abstraction", "SalesSystem.Payments.Abstraction\SalesSystem.Payments.Abstraction.csproj", "{FB815489-C585-4659-B68E-132D2B197551}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateDesignP", "StateDesignP\StateDesignP.csproj", "{46E9A940-8A20-470C-8D97-CDDEC9D2A545}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{FB815489-C585-4659-B68E-132D2B197551}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB815489-C585-4659-B68E-132D2B197551}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB815489-C585-4659-B68E-132D2B197551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46E9A940-8A20-470C-8D97-CDDEC9D2A545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E9A940-8A20-470C-8D97-CDDEC9D2A545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E9A940-8A20-470C-8D97-CDDEC9D2A545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E9A940-8A20-470C-8D97-CDDEC9D2A545}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
